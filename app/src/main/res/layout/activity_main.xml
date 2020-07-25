@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#000099">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_setting"
+            android:layout_marginRight="30dp" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Profile details"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_leftarrow"
+            android:layout_marginLeft="20dp" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000099">
+
+                <LinearLayout
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img"
+                        android:layout_gravity="center_vertical"
+                        android:layout_centerHorizontal="true"
+                        android:id="@+id/info"
+                        android:layout_marginRight="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+
+                            android:textColor="#ffffff"
+                            android:id="@+id/name"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:text="Shamith Shetty"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            android:text="Mangalore,DK"
+                            android:textColor="#ffffff" />
+                    </LinearLayout>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/img"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:src="@drawable/pic"
+                        app:civ_border_color="#d1b1b1"
+                        android:layout_alignParentRight="true"
+                        android:foregroundGravity="center"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:layout_below="@+id/content"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:justificationMode="inter_word"
+                    android:text="    Life imposes things on you that you can’t control, but you still have the choice of how you’re going to live through this"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="#000099">
+                </LinearLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="bottom"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    android:paddingBottom="30dp"
+                    android:paddingEnd="40dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:paddingStart="40dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/box1"
+                    android:elevation="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/box_round">
+
+                    <TextView
+                        android:id="@+id/budge1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/round_text"
+                        android:gravity="center"
+                        android:text="30"
+                        android:textColor="#ffffffff"
+                        android:textSize="12sp"
+                        android:textStyle = "bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <ImageView
+                        android:id="@+id/boxicon1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_pic3"/>
+                    <TextView
+                        android:id="@+id/boxtxt1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blue sky"
+                        android:layout_margin="5dp"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/box2"
+                    android:clickable="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:elevation="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/box_round">
+                    <TextView
+                        android:id="@+id/budge2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/round_text"
+                        android:gravity="center"
+                        android:text="15"
+                        android:textColor="#ffffffff"
+                        android:textSize="12sp"
+                        android:textStyle = "bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true" />
+
+
+
+                    <ImageView
+                        android:id="@+id/boxicon2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_pic2"/>
+                    <TextView
+                        android:id="@+id/boxtxt2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Dark sky"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/box3"
+                    android:clickable="true"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:elevation="10dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/box_round">
+
+                    <TextView
+                        android:id="@+id/budge3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/round_text"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textColor="#ffffffff"
+                        android:textSize="12sp"
+                        android:textStyle = "bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"/>
+
+                    <ImageView
+                        android:id="@+id/boxicon3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_pic1"/>
+                    <TextView
+                        android:id="@+id/boxtxt3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Orange sky"
+                        android:layout_margin="5dp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
